@@ -118,7 +118,7 @@ class HtmlFeatures extends React.Component<Props, State> {
           onStyleLoad={this.onStyleLoad}
         >
           {selected && (
-            <Marker coordinates={selected.center}>
+            <Marker onMouseDown={() => console.log('Mouse Down')} onMouseUp={() => console.log('Mouse Up')} coordinates={selected.center}>
               <Mark />
             </Marker>
           )}
